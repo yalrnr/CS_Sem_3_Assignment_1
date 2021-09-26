@@ -1,5 +1,5 @@
-# CS_Sem_3_Assignment_1
-Assignment-no 1
+# CS_Sem_3_Assignment_I
+Assignment-no I
 
 CS 201, Data Structures
 
