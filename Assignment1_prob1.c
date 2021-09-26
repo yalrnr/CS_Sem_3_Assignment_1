@@ -1,3 +1,10 @@
+/*  
+    Mini-Project 1
+    CS 201, Data Structures
+    Department of Computer Science and Engineering, 
+    National Institute of Technology Silchar
+    Anuj Yadav_2012024
+*/
 #include <stdio.h>
 #include <string.h>
 int main()
