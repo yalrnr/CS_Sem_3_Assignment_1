@@ -10,7 +10,7 @@
 int main()
 {   
        char number[100];
-       int length,i,DotCount=0,index;
+       int length,i,DotCount=0,index,checkifNumberPostDecimal=0,checkifNumberPreDecimal=0;
        scanf("%s",number);
        length=strlen(number);
        for(i=0;i<length;++i){
@@ -19,7 +19,15 @@ int main()
                index=i;
            }
        }
-       if(DotCount==1&&number[index+1]>=48&&number[index+1]<=57){
+       for(i=0;i<index;++i){
+           if(number[i]>=48 && number[i]<=57)
+           checkifNumberPreDecimal++;
+       }
+       for(i= index+1;i<length;++i){
+           if(number[i]>=48 && number[i]<=57)
+           checkifNumberPostDecimal++;
+       }
+       if(DotCount==1&&(checkifNumberPostDecimal==(length-index-1))&&length-index-1<=6 && checkifNumberPreDecimal==index){
        printf("Valid \n");
        }
        else{
