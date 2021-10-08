@@ -46,10 +46,10 @@ int main(){
 }
 /* 
 
-              ---Analysis of two Algorithms---
+              ---Analysis of two Algorithms for two cases---
               
               
-Unsorted Array-
+Randomly Generated Input-
 Input-
 size=40 
 Output-
@@ -63,6 +63,12 @@ Total clock ticks elapsed for Selection Sort : 1791
 Total clock ticks elapsed for Bubble Sort : 1860
 
 Input-
+size=5,000
+Output-
+Total clock ticks elapsed for Selection Sort : 40280
+Total clock ticks elapsed for Bubble Sort : 42650
+
+Input-
 size=10,000
 Output-
 Total clock ticks elapsed for Selection Sort : 186630
@@ -70,7 +76,7 @@ Total clock ticks elapsed for Bubble Sort : 202163
 
 */
 /*
-Sorted Array-
+Already Sorted Input-
 
 Input-
 size=40 
@@ -85,14 +91,20 @@ Total clock ticks elapsed for Selection Sort : 1657
 Total clock ticks elapsed for Bubble Sort : 1771
 
 Input-
+size=5,000
+Output-
+Total clock ticks elapsed for Selection Sort : 36686
+Total clock ticks elapsed for Bubble Sort : 34643
+
+Input-
 size=10,000
 Output-
-Total clock ticks elapsed for Selection Sort : 175407
-Total clock ticks elapsed for Bubble Sort : 188659
+Total clock ticks elapsed for Selection Sort : 142821
+Total clock ticks elapsed for Bubble Sort : 136249
 
 //The data is following a pattern ,a general plot of their Time(for algorithms) vs Input data is  attached as a file.
 //Among simple average-case O(n2) algorithms, Selection Sort almost always outperforms Bubble Sort. However when the array is sorted in
-//ascending order, Bubble Sort performs at O(n), which is its best case while Selection sort at O(n^2). 
+//ascending order, Bubble Sort runs at O(n), which is its best case while Selection sort at O(n^2). 
 //While in case of sorted array of descending order, Bubble Sort perfoms n^2 operations, which is 
 // its worst case, and thus takes much more time than Selection Sort.
 //In case of unsorted array, Selection Sort performs less number of swaps than Bubble Sort.
@@ -106,4 +118,3 @@ Total clock ticks elapsed for Bubble Sort : 188659
 //The bottom line is-
 ***For sorted array of ascending order, Bubble Sort is preferred since it takes less time-O(n) while in any other case, Selection Sort is preferred-(due to less no of swaps).
 */
-
