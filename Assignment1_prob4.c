@@ -34,9 +34,9 @@ void calculation(int arr[],int n){
     bubbleSort(arr, n);
     endBubbleSort=clock();
     t_SelectionSort=endSelectionSort-startSelectionSort;
-    printf("Total elapsed time for Selection Sort : %lld\n", t_SelectionSort);
+    printf("Total clock ticks elapsed for Selection Sort : %lld\n", t_SelectionSort);//To get the time in second, divide t_SelectionSort by CLOCKS_PER_SEC
     t_BubbleSort=endBubbleSort-startBubbleSort;
-    printf("Total elapsed time for Bubble Sort : %lld\n", t_BubbleSort);
+    printf("Total clock ticks elapsed for Bubble Sort : %lld\n", t_BubbleSort);//To get the time in second, divide t_BubbleSort by CLOCKS_PER_SEC
 }
 int main(){
     int n; scanf("%d",&n);
@@ -53,20 +53,20 @@ Unsorted Array-
 Input-
 size=40 
 Output-
-Total elapsed time for Selection Sort : 6
-Total elapsed time for Bubble Sort : 4
+Total clock ticks elapsed for Selection Sort : 6
+Total clock ticks elapsed for Bubble Sort : 4
 
 Input-
 size=1000
 Output-
-Total elapsed time for Selection Sort : 1791
-Total elapsed time for Bubble Sort : 1860
+Total clock ticks elapsed for Selection Sort : 1791
+Total clock ticks elapsed for Bubble Sort : 1860
 
 Input-
 size=10,000
 Output-
-Total elapsed time for Selection Sort : 186630
-Total elapsed time for Bubble Sort : 202163
+Total clock ticks elapsed for Selection Sort : 186630
+Total clock ticks elapsed for Bubble Sort : 202163
 
 */
 /*
@@ -75,20 +75,20 @@ Sorted Array-
 Input-
 size=40 
 Output-
-Total elapsed time for Selection Sort : 6
-Total elapsed time for Bubble Sort : 4
+Total clock ticks elapsed for Selection Sort : 6
+Total clock ticks elapsed for Bubble Sort : 4
 
 Input-
 size=1000
 Output-
-Total elapsed time for Selection Sort : 1657
-Total elapsed time for Bubble Sort : 1771
+Total clock ticks elapsed for Selection Sort : 1657
+Total clock ticks elapsed for Bubble Sort : 1771
 
 Input-
 size=10,000
 Output-
-Total elapsed time for Selection Sort : 175407
-Total elapsed time for Bubble Sort : 188659
+Total clock ticks elapsed for Selection Sort : 175407
+Total clock ticks elapsed for Bubble Sort : 188659
 
 //The data is following a pattern ,a general plot of their Time(for algorithms) vs Input data is  attached as a file.
 //Among simple average-case O(n2) algorithms, Selection Sort almost always outperforms Bubble Sort. However when the array is sorted in
@@ -97,8 +97,12 @@ Total elapsed time for Bubble Sort : 188659
 // its worst case, and thus takes much more time than Selection Sort.
 //In case of unsorted array, Selection Sort performs less number of swaps than Bubble Sort.
 // The fundamental reason for this behaviour is due to the fact that When using selecting sort it swaps n times at most while when using bubble sort, it swaps almost n*(n-1).
-//For Bubble Sort #Worst complexity: n^2    #Average complexity: n^2  #Best complexity: n
-//For Selection Sort  #Worst complexity: n^2    #Average complexity: n^2  #Best complexity: n^2
+
+        For Bubble Sort                          For Selection Sort
+      #Worst complexity: n^2                  #Worst complexity: n^2
+      #Average complexity: n^2                #Average complexity: n^2
+      #Best complexity: n                     #Best complexity: n^2     
+      
 //The bottom line is-
 ***For sorted array of ascending order, Bubble Sort is preferred since it takes less time-O(n) while in any other case, Selection Sort is preferred-(due to less no of swaps).
 */
