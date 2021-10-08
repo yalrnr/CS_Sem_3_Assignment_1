@@ -44,7 +44,11 @@ int main(){
     calculation(arr,n);
     return 0;
 }
-/* Analysis of two Algorithms---
+/* 
+
+              ---Analysis of two Algorithms---
+              
+              
 Unsorted Array-
 Input-
 size=40 
